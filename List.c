@@ -31,3 +31,16 @@ struct list_node *list_pop(struct list_node **head) {
     current_head->next = NULL;
     return current_head;
 }
+
+struct list_node *list_remove(struct list_node **head, struct list_node *item) {
+    struct list_node *current_node = *head;
+    while(current_node->next != item) {
+        current_node = current_node->next;
+    }
+    if(!current_node) { // scroll all and not find item
+        return NULL;
+    }
+    struct list_node *removed = current_node->next;
+    current_node->next = current_node->next->next;
+    return removed;
+}

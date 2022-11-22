@@ -8,3 +8,5 @@ struct list_node *list_append(struct list_node **head, struct list_node *item);
 struct list_node *list_pop(struct list_node **head);
 
 struct string_item *string_item_new(const char *string);
+
+struct list_node *list_remove(struct list_node **head, struct list_node *item);
