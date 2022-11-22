@@ -27,5 +27,13 @@ int main() {
         printf("%s\n", string_item->string);
         string_item = toStringItem string_item->node.next;
     }
+
+    printf("==========REVERSED LIST==========\n");
+    string_item = toStringItem list_reverse(toList&my_linked_list);
+    while (string_item) {
+        printf("%s\n", string_item->string);
+        string_item = toStringItem string_item->node.next;
+    }
+
     return 0;
 }
