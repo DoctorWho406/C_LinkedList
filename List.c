@@ -42,6 +42,7 @@ struct list_node *list_remove(struct list_node **head, struct list_node *item) {
     }
     struct list_node *removed = current_node->next;
     current_node->next = current_node->next->next;
+    removed->next = NULL;
     return removed;
 }
 
