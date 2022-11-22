@@ -44,3 +44,19 @@ struct list_node *list_remove(struct list_node **head, struct list_node *item) {
     current_node->next = current_node->next->next;
     return removed;
 }
+
+
+struct list_node *list_reverse(struct list_node **head) {
+    struct list_node *curr_node = *head;
+    struct list_node *prev_node = NULL;
+    struct list_node *next_node = NULL;
+
+    while(curr_node) {
+        next_node = curr_node->next;
+        curr_node->next = prev_node;
+        prev_node = curr_node;
+        curr_node = next_node;
+    }
+
+    return prev_node;
+}
