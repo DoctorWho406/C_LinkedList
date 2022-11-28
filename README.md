@@ -12,5 +12,5 @@ clang.exe -o LinkedList.exe LinkedList.c StringItem.c List.c
 
 ### Run it
 ```
-.\LinkedList.exe
+./LinkedList.exe
 ```
