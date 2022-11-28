@@ -1,14 +1,14 @@
 #include <stddef.h>
 #include "Item.h"
 
-struct list_node *list_get_tail(struct list_node **head);
+list_node_t *list_get_tail(list_node_t **head);
 
-struct list_node *list_append(struct list_node **head, struct list_node *item);
+list_node_t *list_append(list_node_t **head, list_node_t *item);
 
-struct list_node *list_pop(struct list_node **head);
+list_node_t *list_pop(list_node_t **head);
 
-struct string_item *string_item_new(const char *string);
+string_item_t *string_item_new(const char *string);
 
-struct list_node *list_remove(struct list_node **head, struct list_node *item);
+list_node_t *list_remove(list_node_t **head, list_node_t *item);
 
-struct list_node *list_reverse(struct list_node **head);
+list_node_t *list_reverse(list_node_t **head);

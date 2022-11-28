@@ -2,8 +2,8 @@
 #include <stdlib.h>
 #include "Functions.h"
 
-struct string_item *string_item_new(const char *string) {
-    struct string_item *item = malloc(sizeof(struct string_item));
+string_item_t *string_item_new(const char *string) {
+    string_item_t *item = malloc(sizeof(string_item_t));
     if (!item) {
         return NULL;
     }
