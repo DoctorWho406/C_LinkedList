@@ -3,6 +3,6 @@ typedef struct list_node{
 } list_node_t;
 
 typedef struct string_item {
-    struct list_node node;
+    list_node_t node;
     const char *string;
 } string_item_t;
