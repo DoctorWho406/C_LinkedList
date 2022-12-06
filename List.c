@@ -34,10 +34,10 @@ struct list_node *list_pop(struct list_node **head) {
 
 struct list_node *list_remove(struct list_node **head, struct list_node *item) {
     struct list_node *current_node = *head;
-    while(current_node->next != item) {
+    while (current_node->next != item) {
         current_node = current_node->next;
     }
-    if(!current_node) { // scroll all and not find item
+    if (!current_node) { // scroll all and not find item
         return NULL;
     }
     struct list_node *removed = current_node->next;
@@ -52,7 +52,7 @@ struct list_node *list_reverse(struct list_node **head) {
     struct list_node *prev_node = NULL;
     struct list_node *next_node = NULL;
 
-    while(curr_node) {
+    while (curr_node) {
         next_node = curr_node->next;
         curr_node->next = prev_node;
         prev_node = curr_node;
