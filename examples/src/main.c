@@ -3,7 +3,6 @@
 #include <stdlib.h>
 
 #include "LinkedList.h"
-#define LINKED_LIST_INIT
 #include "StringItem.h"
 
 #define to_list (list_node_t **)
