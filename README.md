@@ -21,12 +21,12 @@ Create executable using `example.bat` (it require clang.exe)
 
 ## Command with clang.exe
 ```
-clang -o example/bin/Example.exe -I include -I example/include src/LinkedList.c example/src/StringItem.c example/src/main.c
+clang -o examples/bin/Example.exe -I include -I examples/include src/LinkedList.c examples/src/StringItem.c examples/src/main.c
 ```
 N.B.<br>
-It requires that the `example/bin` folder exists
+It requires that the `examples/bin` folder exists
 
 ## Run it
 ```
-./example/bin/Example.exe
+./examples/bin/Example.exe
 ```
