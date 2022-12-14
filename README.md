@@ -3,14 +3,16 @@ Simple implementation of LinkedList in C
 
 ## Using
 
-Create executable using `List.c`, `StringItem.c` and `LinkedList.c`
+Create executable using `build.bat` (it use clang.exe)
 
-### Example with clang.exe
+### Command with clang.exe
 ```
-clang.exe -o LinkedList.exe LinkedList.c StringItem.c List.c
+clang -o bin/LinkedList.exe -I include src/LinkedList.c src/StringItem.c src/List.c
 ```
+N.B.<br>
+It requires that the bin folder exists
 
 ### Run it
 ```
-./LinkedList.exe
+./bin/LinkedList.exe
 ```
