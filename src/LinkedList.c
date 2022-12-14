@@ -37,13 +37,13 @@ list_node_t *list_pop(list_node_t **head) {
     return current_head;
 }
 
-list_node_t *list_remove(list_node_t **head, list_node_t *item, size_t node_length) {
+list_node_t *list_remove(list_node_t **head, list_node_t *item, size_t size_of_value) {
     list_node_t *current_node = *head;
     list_node_t *prev_node = NULL;
     list_node_t *removed = NULL;
 
     while (current_node) {
-        if (memcmp(current_node + 1, item + 1, node_length) == 0) {
+        if (memcmp(current_node + 1, item + 1, size_of_value) == 0) {
             removed = current_node;
             if (prev_node) {
                 prev_node->next = current_node->next;
