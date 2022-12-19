@@ -7,7 +7,7 @@ You could create a dll using `make.bat` (it require clang.exe)
 
 ## Command with clang.exe
 ```
-clang -shared -o library/linkedlist.dll -I include -I examples/include src/LinkedList.c examples/src/StringItem.c examples/src/main.c
+clang -shared -o library/linkedlist.dll -I include src/LinkedList.c
 ```
 N.B.<br>
 It requires that the `library` folder exists
