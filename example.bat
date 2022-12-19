@@ -1,17 +1,19 @@
 @echo off
 
-IF EXIST "examples\bin" (
-    RD /S /Q "examples\bin"
+set BAT_BASE_PATH=%~p0
+
+IF EXIST "%BAT_BASE_PATH%examples\bin" (
+    RD /S /Q "%BAT_BASE_PATH%examples\bin"
 )
 
-MD "examples\bin"
+MD "%BAT_BASE_PATH%examples\bin"
 
-clang -o examples/bin/Example.exe -I include -I examples/include src/LinkedList.c examples/src/StringItem.c examples/src/main.c
+clang -o "%BAT_BASE_PATH%examples/bin/Example.exe" -I "%BAT_BASE_PATH%include" -I "%BAT_BASE_PATH%examples/include" "%BAT_BASE_PATH%src/LinkedList.c" "%BAT_BASE_PATH%examples/src/StringItem.c" "%BAT_BASE_PATH%examples/src/main.c"
 
-IF EXIST "examples\bin\Example.exp" (
-    DEL /Q "examples\bin\Example.exp"
+IF EXIST "%BAT_BASE_PATH%examples\bin\Example.exp" (
+    DEL /Q "%BAT_BASE_PATH%examples\bin\Example.exp"
 )
 
-IF EXIST "examples\bin\Example.lib" (
-    DEL /Q "examples\bin\Example.lib"
+IF EXIST "%BAT_BASE_PATH%examples\bin\Example.lib" (
+    DEL /Q "%BAT_BASE_PATH%examples\bin\Example.lib"
 )
