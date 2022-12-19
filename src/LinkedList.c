@@ -1,7 +1,6 @@
 #include <stddef.h>
 #include <string.h>
 
-#define LINKED_LIST_INIT
 #include "LinkedList.h"
 
 

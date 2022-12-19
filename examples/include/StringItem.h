@@ -1,4 +1,3 @@
-#define LINKED_LIST_INIT
 #include "LinkedList.h"
 
 typedef struct string_item {
