@@ -1,7 +1,7 @@
 #include <stddef.h>
 #include <string.h>
 
-#include "LinkedList.h"
+#include "linked_list.h"
 
 
 list_node_t *list_get_tail(list_node_t **head) {

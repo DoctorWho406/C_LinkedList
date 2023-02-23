@@ -2,8 +2,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "LinkedList.h"
-#include "StringItem.h"
+#include "linked_list.h"
+#include "linked_list_string_item.h"
 
 #define to_list (list_node_t **)
 #define to_node (list_node_t *)
