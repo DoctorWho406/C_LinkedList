@@ -199,3 +199,39 @@ CLOVE_TEST(RemoveNewItemFromLinkedListWithTwoItem) {
 
     free(first);
 }
+
+
+CLOVE_TEST(ReverseFromLinkedListWithZeroItem) {
+    list_node_t *head = NULL;
+
+    linked_list_reverse(&head);
+    CLOVE_NULL(head);
+}
+
+CLOVE_TEST(ReverseFromLinkedListWithOneItem) {
+    list_node_t *head = NULL;
+    test_item_t *first = new_test_item(1);
+
+    linked_list_append(&head, (list_node_t *)first);
+
+    linked_list_reverse(&head);
+    CLOVE_PTR_EQ(first, head);
+
+    free(first);
+}
+
+CLOVE_TEST(ReverseFromLinkedListWithTwoItem) {
+    list_node_t *head = NULL;
+    test_item_t *first = new_test_item(1);
+    test_item_t *second = new_test_item(2);
+
+    linked_list_append(&head, (list_node_t *)first);
+    linked_list_append(&head, (list_node_t *)second);
+
+    linked_list_reverse(&head);
+    CLOVE_PTR_EQ(second, head);
+    CLOVE_PTR_EQ(first, head->next);
+
+    free(first);
+    free(second);
+}
