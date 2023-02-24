@@ -23,7 +23,7 @@ int main() {
     }
 
     string_item_t *item_to_search = string_item_new("Test001");
-    string_item_t *removed_item = to_string_item list_remove(to_list & my_linked_list, to_node item_to_search, 8);
+    string_item_t *removed_item = to_string_item linked_list_remove(to_list & my_linked_list, to_node item_to_search, 8);
     string_item = my_linked_list;
     printf("==========LIST AFTER REMOVE==========\n");
     while (string_item) {
@@ -35,7 +35,7 @@ int main() {
     free(removed_item);
 
     printf("==========REVERSED LIST==========\n");
-    list_reverse(to_list & my_linked_list);
+    linked_list_reverse(to_list & my_linked_list);
     string_item = my_linked_list;
     while (string_item) {
         printf("%s\n", string_item->string);
@@ -44,7 +44,7 @@ int main() {
 
     // Free list
     while (my_linked_list) {
-        removed_item = to_string_item list_pop(to_list & my_linked_list);
+        removed_item = to_string_item linked_list_pop(to_list & my_linked_list);
         free(removed_item);
     }
 

@@ -1,10 +1,18 @@
-#include <stddef.h>
 #include <string.h>
 
 #include "linked_list.h"
 
+void linked_list_append(list_node_t **head, list_node_t *item) {
+    list_node_t *tail = linked_list_get_tail(head);
+    if (!tail) {
+        *head = item;
+    } else {
+        tail->next = item;
+    }
+    item->next = NULL;
+}
 
-list_node_t *list_get_tail(list_node_t **head) {
+list_node_t *linked_list_get_tail(list_node_t **head) {
     list_node_t *current_node = *head;
     list_node_t *last_node = NULL;
     while (current_node) {
@@ -14,28 +22,17 @@ list_node_t *list_get_tail(list_node_t **head) {
     return last_node;
 }
 
-list_node_t *list_append(list_node_t **head, list_node_t *item) {
-    list_node_t *tail = list_get_tail(head);
-    if (!tail) {
-        *head = item;
-    } else {
-        tail->next = item;
-    }
-    item->next = NULL;
-    return item;
-}
-
-list_node_t *list_pop(list_node_t **head) {
-    list_node_t *current_head = *head;
-    if (!current_head) {
+list_node_t *linked_list_pop(list_node_t **head) {
+    if (!*head) {
         return NULL;
     }
+    list_node_t *current_head = *head;
     *head = (*head)->next;
     current_head->next = NULL;
     return current_head;
 }
 
-list_node_t *list_remove(list_node_t **head, list_node_t *item, size_t size_of_value) {
+list_node_t *linked_list_remove(list_node_t **head, list_node_t *item, size_t size_of_value) {
     list_node_t *current_node = *head;
     list_node_t *prev_node = NULL;
     list_node_t *removed = NULL;
@@ -58,8 +55,7 @@ list_node_t *list_remove(list_node_t **head, list_node_t *item, size_t size_of_v
     return removed;
 }
 
-
-void list_reverse(list_node_t **head) {
+void linked_list_reverse(list_node_t **head) {
     list_node_t *curr_node = *head;
     list_node_t *prev_node = NULL;
     list_node_t *next_node = NULL;
