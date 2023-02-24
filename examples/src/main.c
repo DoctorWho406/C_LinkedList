@@ -11,10 +11,10 @@
 
 int main() {
     string_item_t *my_linked_list = NULL;
-    list_append(to_list & my_linked_list, to_node string_item_new("Hello World"));
-    list_append(to_list & my_linked_list, to_node string_item_new("Test001"));
-    list_append(to_list & my_linked_list, to_node string_item_new("Test002"));
-    list_append(to_list & my_linked_list, to_node string_item_new("Last Item of the Linked List"));
+    linked_list_append(to_list & my_linked_list, to_node string_item_new("Hello World"));
+    linked_list_append(to_list & my_linked_list, to_node string_item_new("Test001"));
+    linked_list_append(to_list & my_linked_list, to_node string_item_new("Test002"));
+    linked_list_append(to_list & my_linked_list, to_node string_item_new("Last Item of the Linked List"));
     string_item_t *string_item = my_linked_list;
     printf("==========LIST==========\n");
     while (string_item) {
