@@ -8,7 +8,7 @@ IF EXIST "%BAT_BASE_PATH%test\bin" (
 
 MD "%BAT_BASE_PATH%test\bin"
 
-clang -o "%BAT_BASE_PATH%test\bin\test.exe" -I "%BAT_BASE_PATH%include" "%BAT_BASE_PATH%src\*.c" "%BAT_BASE_PATH%test\*.c"
+clang -o "%BAT_BASE_PATH%test\bin\test.exe" -I "%BAT_BASE_PATH%test\include" -I "%BAT_BASE_PATH%include" "%BAT_BASE_PATH%src\*.c" "%BAT_BASE_PATH%test\*.c"
 
 IF %ERRORLEVEL% EQU 0 (
     IF EXIST "%BAT_BASE_PATH%test\bin\test.exp" (
