@@ -52,4 +52,5 @@ Module.symvers
 Mkfile.old
 dkms.conf
 
-.vscode
+.vscode/*
+!.vscode/clove_unit_settings.json
