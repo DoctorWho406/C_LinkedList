@@ -102,7 +102,8 @@ Create executable using `example.bat` (it require clang.exe)
 clang -o examples/bin/example.exe -I include -I examples/include src/*.c examples/src/*.c -L linkedlist\lib -llinkedlist
 ```
 N.B.<br>
-It requires that the `examples/bin` folder exists
+It requires that the `examples/bin` folder exists.<br/>
+Copy `linkedlist.dll` from `linkedlist\lib` folder to `examples/bin` folder
 
 ## Run it
 ```
