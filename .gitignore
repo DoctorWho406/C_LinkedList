@@ -54,3 +54,6 @@ dkms.conf
 
 .vscode/*
 !.vscode/clove_unit_settings.json
+
+# Output library
+/linkedlist
